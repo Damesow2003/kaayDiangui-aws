@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAAY JAANG - Éducation pour tous</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--light-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .qrcode {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .qrcode img {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        
+        .btn-secondary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+        .logo{
+          width: 100
+          size: 18px
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./image/logo.png" alt="KAAY JAANG Logo" class="logo"> Kaay Diang
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mission">Mission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#equipe">Équipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">KAAY JAANG</h1>
+            <p class="lead fs-3 mb-5">Éducation pour tous au Sénégal</p>
+            <a href="#mission" class="btn btn-primary btn-lg me-3">Notre Mission</a>
+            <a href="#contact" class="btn btn-secondary btn-lg">Faire un don</a>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Notre Mission</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contexte</h3>
+                    <p>Au Sénégal, de nombreux enfants n'ont pas accès à l'éducation en raison de l'absence d'infrastructures scolaires, de moyens financiers limités ou de traditions archaïques qui privilégient le travail ou le mariage précoce plutôt que la scolarisation, particulièrement pour les filles.</p>
+                    <p>Notre organisation "KAAY JAANG" (qui signifie "Venez apprendre" en wolof) a pour mission de faciliter l'accès et la poursuite de l'éducation pour tous les enfants sénégalais, sans distinction de genre, de situation économique ou de handicap.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Enfants sénégalais" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Nos Objectifs</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-school card-icon"></i>
+                        <h3>Réduire la déscolarisation</h3>
+                        <p>Intervenir dans les zones où le taux d'abandon scolaire est le plus élevé pour réinsérer les enfants dans le système éducatif.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-book card-icon"></i>
+                        <h3>Fournir du matériel</h3>
+                        <p>Distribuer gratuitement des kits scolaires (cahiers, stylos, livres) aux enfants les plus vulnérables.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-chalkboard-teacher card-icon"></i>
+                        <h3>Soutien scolaire</h3>
+                        <p>Mettre en place un système d'appui scolaire avec des volontaires formés pour accompagner les élèves.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Nos Services</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Kits scolaires gratuits</h3>
+                            <p class="card-text">Nous fournissons des kits scolaires complets (cahiers, stylos, livres de base) aux enfants vulnérables pour leur permettre d'étudier dans de bonnes conditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Classes communautaires</h3>
+                            <p class="card-text">Dans les zones non desservies par le système éducatif formel, nous mettons en place des classes communautaires avec des enseignants bénévoles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Tutorat éducatif</h3>
+                            <p class="card-text">Des bénévoles (enseignants à la retraite, étudiants) offrent un soutien scolaire personnalisé aux enfants en difficulté.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Applications mobiles</h3>
+                            <p class="card-text">Nous développons des applications éducatives avec des contenus en français et en langues locales pour faciliter l'apprentissage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Notre Équipe</h2>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="./image/img6.png" alt="Mouhamed NDOYE">
+                    <h4>Mouhamed NDOYE</h4>
+                    <p class="text-muted">Coordinateur général PDG</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="./image/img5.jpg" alt="Seynabou BADJI">
+                    <h4>Seynabou BADJI</h4>
+                    <p class="text-muted">Secrétariat</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="./image/img4.jpg" alt="Baye Mahanta GUEYE">
+                    <h4>Baye Mahanta GUEYE</h4>
+                    <p class="text-muted">Trésorier</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="./image/img2.jpg" alt="Dame SOW">
+                    <h4>Dame SOW</h4>
+                    <p class="text-muted">Responsable logistique</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="./image/img1.jpg" alt="Khardiata NDIAYE">
+                    <h4>Khardiata NDIAYE</h4>
+                    <p class="text-muted">Chargée de partenariat</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="./image/img7.png" alt="Volontaires">
+                    <h4>Nos volontaires</h4>
+                    <p class="text-muted">Engagés pour l'éducation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h3>Contactez-nous</h3>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Dakar, Sénégal</p>
+                    <p><i class="fas fa-phone me-2"></i> +33 xxx xxx xxx</p>
+                    <p><i class="fas fa-envelope me-2"></i> contact@kaayjaang.org</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3>Soutenez notre cause</h3>
+                    <p>Faites un don pour soutenir l'éducation au Sénégal</p>
+                    <div class="qrcode">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kaayjaang.org/don" alt="QR Code pour les dons">
+                    </div>
+                    <p class="mt-2">Scannez pour faire un don</p>
+                </div>
+            </div>
+            <hr class="mt-4 bg-light">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2023 KAAY JAANG - Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
